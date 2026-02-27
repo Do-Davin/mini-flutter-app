@@ -13,9 +13,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,6 +73,7 @@ class MyHomePage extends StatelessWidget {
 }
 
 Widget _buildTopCard() {
+  double progress = 0.7;
   return Container(
     width: double.infinity,
     padding: const EdgeInsets.all(20),
@@ -118,11 +124,19 @@ Widget _buildTopCard() {
               SizedBox(
                 width: 70,
                 height: 70,
-                child: CircularProgressIndicator(
-                  value: 0.7,
-                  strokeWidth: 6,
-                  backgroundColor: Colors.white10,
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.greenAccent),
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: progress),
+                  duration: const Duration(seconds: 1),
+                  builder: (context, value, child) {
+                    return CircularProgressIndicator(
+                      value: value,
+                      strokeWidth: 6,
+                      backgroundColor: Colors.white10,
+                      valueColor: const AlwaysStoppedAnimation<Color>(
+                        Colors.greenAccent,
+                      ),
+                    );
+                  },
                 ),
               ),
               const Text(
