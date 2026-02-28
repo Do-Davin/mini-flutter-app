@@ -243,6 +243,11 @@ Widget _buildListSection() {
         "Classes, Objects, Inheritance",
         Icons.account_tree,
       ),
+      _buildListItem(
+        "SOLID Principle",
+        "Learning writing code reusable & maintainable",
+        Icons.book,
+      ),
     ],
   );
 }
