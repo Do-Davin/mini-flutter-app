@@ -36,14 +36,27 @@ class _MyHomeState extends State<MyHome> {
         ),
       ),
       body: Center(
-        child: Container(
-          width: 300,
-          height: 300,
-          color: Colors.yellow,
-          child: Text(
-            'Container',
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-          ),
+        child: Column(
+          children: [
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.yellow,
+              child: Text(
+                'Container',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.blueAccent,
+              child: Text(
+                'Container 2',
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       ),
     );
