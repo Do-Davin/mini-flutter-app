@@ -36,7 +36,15 @@ class _MyHomeState extends State<MyHome> {
         ),
       ),
       body: Center(
-        child: Container(width: 300, height: 300, color: Colors.yellow),
+        child: Container(
+          width: 300,
+          height: 300,
+          color: Colors.yellow,
+          child: Text(
+            'Container',
+            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }
