@@ -1,0 +1,26 @@
+name: my_app # Project name (snake_case)
+description: A Flutter demo. # Short description
+version: 1.0.0+1 # version+buildNumber
+publish_to: 'none' # Prevent accidental pub.dev publish
+
+environment:
+  sdk: '>=3.0.0 <4.0.0' # Dart SDK constraint
+  flutter: '>=3.10.0' # Flutter SDK constraint
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6 # iOS-style icons
+  http: ^1.2.0 # HTTP client
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lint: ^3.0.0 # Recommended lint rules
+
+flutter:
+  uses-material-design: true # Enable Material icons
+  assets: # Declare static assets
+    - assets/images/
+
+# NOTE: Run 'flutter pub get' after every change to pubspec.yaml
